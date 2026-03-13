@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
+
+using Microsoft.Extensions.Configuration.Json;
 using Microsoft.IdentityModel.Protocols;
 using System;
 using System.Collections.Generic;
@@ -14,7 +16,7 @@ namespace DataModel
 
         static AyarYonetim() 
         {
-            var builder = new ConfigurationBuilder();           
+            DbAyar = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();           
             //DbAyar = builder.AddJsonFile("appsettings.json").Build();
 
         }
