@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Ornek1
 {
@@ -26,9 +27,21 @@ namespace Ornek1
             {
                 if (eleman is TextBox metinKutusu)
                 {
+                  
                     metinKutusu.Validating += tetxBox_dogrulama_Validating;
+                   
                 }
             }
+        }
+
+        private bool FormdaHataVarMi()
+        {
+            foreach (Control c in gb_KimlikBilgileir.Controls)
+            {
+                if (!string.IsNullOrEmpty(errorProvider1.GetError(c)))
+                    return true;
+            }
+            return false;
         }
 
         void FormValidateIslemi(Control.ControlCollection controls)
@@ -88,7 +101,7 @@ namespace Ornek1
             //FormValidateIslemi(gb_KimlikBilgileir.Controls);
             //FormValidateIslemi(Controls);
 
-            if (errorProvider1.HasErrors == false)
+            if (FormdaHataVarMi()==false)
             {
                 Islem.KullaniciDTO yeniKullanici = new Islem.KullaniciDTO();
                 yeniKullanici.Ad = tb_Ad.Text;
@@ -147,6 +160,7 @@ namespace Ornek1
             {
                 //metinKutusu.BackColor = Color.White;
                 errorProvider1.SetError(metinKutusu, "");
+                
                 //formDoluMu = true;
             }
         }
@@ -154,7 +168,7 @@ namespace Ornek1
         private void KullaniciKayit_Load(object sender, EventArgs e)
         {
             //textbox_ValidateOlayiEkle(gb_IletisimBilgileri.Controls);
-            //textbox_ValidateOlayiEkle(gb_KimlikBilgileir.Controls);
+            textbox_ValidateOlayiEkle(gb_KimlikBilgileir.Controls);
             //textbox_ValidateOlayiEkle(Controls);
         }
     }
