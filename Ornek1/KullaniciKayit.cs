@@ -21,6 +21,10 @@ namespace Ornek1
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Bu metot formdaki tüm TextBox kontrollerine Validating olayını ekler. Validating olayı, bir kontrolün doğrulanması gerektiğinde tetiklenir ve bu olay sırasında doğrulama işlemleri yapılabilir. Bu metot sayesinde, formdaki tüm TextBox kontrolleri için tek tek Validating olayını eklemek yerine, bu işlemi merkezi bir yerden yaparak kodun tekrarını önleriz ve bakımını kolaylaştırırız.
+        /// </summary>
+        /// <param name="controls"></param>
         void textbox_ValidateOlayiEkle(Control.ControlCollection controls)
         {
             foreach (var eleman in controls)
