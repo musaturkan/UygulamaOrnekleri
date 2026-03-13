@@ -13,9 +13,9 @@ namespace Islem
         public string? Soyad { get; set; }
         public DateTime? DogumTarihi { get; set; }
         public string? Meslek { get; set; }
-        public string? Adres { get; set; }
-        public string? Eposta { get; set; }
-        public int Maas { get; set; }
+        public string? Parola { get; set; }
+        public string? KullaniciAdi { get; set; }
+
 
     }
 }

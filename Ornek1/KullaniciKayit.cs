@@ -95,9 +95,9 @@ namespace Ornek1
                 yeniKullanici.Soyad = tb_Soyad.Text;
                 yeniKullanici.DogumTarihi = dtp_DogumTarihi.Value;
                 yeniKullanici.Meslek = cb_Meslek.Text;
-                yeniKullanici.Adres = tb_Adres.Text;
-                yeniKullanici.Eposta = tb_Eposta.Text;
-                yeniKullanici.Maas = Convert.ToInt32(nup_Maas.Value);
+                yeniKullanici.KullaniciAdi = tb_KullaniciAdi.Text;
+                yeniKullanici.Parola = tb_Parola.Text;
+             
 
                 //Islem.KullaniciIslem ki = new Islem.KullaniciIslem();
                 kullaniciIslem.KullaniciEkle(yeniKullanici);
@@ -153,9 +153,9 @@ namespace Ornek1
 
         private void KullaniciKayit_Load(object sender, EventArgs e)
         {
-            textbox_ValidateOlayiEkle(gb_IletisimBilgileri.Controls);
-            textbox_ValidateOlayiEkle(gb_KimlikBilgileir.Controls);
-            textbox_ValidateOlayiEkle(Controls);
+            //textbox_ValidateOlayiEkle(gb_IletisimBilgileri.Controls);
+            //textbox_ValidateOlayiEkle(gb_KimlikBilgileir.Controls);
+            //textbox_ValidateOlayiEkle(Controls);
         }
     }
 }

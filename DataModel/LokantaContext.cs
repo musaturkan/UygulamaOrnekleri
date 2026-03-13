@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace DataModel
 {
@@ -21,8 +22,10 @@ namespace DataModel
         ///Veri tabanı bağlantı işlemleri için OnConfiguring metodu kullanılır. Bu metod içinde UseSqlServer gibi bir yöntemle veritabanı bağlantı dizesi sağlanır.
         ///
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {            
+        {    
+            //string connectionString = ConfigurationManager.ConnectionStrings["LokantaConnection"].ConnectionString;
             optionsBuilder.UseSqlServer(@"Server=LAB708-PC;Database=Lokanta;Trusted_Connection=True;TrustServerCertificate=True");
+            //optionsBuilder.UseSqlServer(connectionString);
         }
 
 

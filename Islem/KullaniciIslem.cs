@@ -22,7 +22,14 @@ namespace Islem
             kullanici.Soyad = yeniKullanici.Soyad;
             kullanici.KayitTarihi = DateTime.Now;
             kullanici.DogumTarihi = yeniKullanici.DogumTarihi;
-
+            kullanici.KullaniciAdi = yeniKullanici.KullaniciAdi;
+            kullanici.Parola = yeniKullanici.Parola;
+            ///DTO nesneleri ile entity dönüşümleri yapan kütüphaneler kullanılabilir
+            ///Böylece dönüşüm işleminde oluşan kalabalıktan kurtuluruz
+            ///Dönüşüm işlemlerini bir merkezi yere taşımız oluruz
+            ///Bu işlem için mesela AutoMapper kütüphanesi kullanılabilir
+            ///Kendiy yazdığımız bir generic dönüştürme metodu da kulllanılabilir
+            
             context.Kullanici.Add(kullanici);///Kullanici nesnesini bellekteki context nesnesine ekler ancak henüz veri tabanına kaydetmez
             context.SaveChanges(); ///Veri tabanına ekleme işlemini gerçekleştirir
 
