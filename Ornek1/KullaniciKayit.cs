@@ -20,13 +20,24 @@ namespace Ornek1
             InitializeComponent();
         }
 
+        void textbox_ValidateOlayiEkle(Control.ControlCollection controls)
+        {
+            foreach (var eleman in controls)
+            {
+                if (eleman is TextBox metinKutusu)
+                {
+                    metinKutusu.Validating += tetxBox_dogrulama_Validating;
+                }
+            }
+        }
+
         void FormValidateIslemi(Control.ControlCollection controls)
         {
             foreach (var eleman in controls)
             {
                 if (eleman is TextBox metinKutusu)
                 {
-                    if (metinKutusu.Tag=="zorunlu" && string.IsNullOrWhiteSpace(metinKutusu.Text))
+                    if (metinKutusu.Tag == "zorunlu" && string.IsNullOrWhiteSpace(metinKutusu.Text))
                     {
                         errorProvider1.SetError(metinKutusu, "Bu alan zorunludur");
                     }
@@ -73,11 +84,11 @@ namespace Ornek1
             //    }
             //}
 
-            FormValidateIslemi(gb_IletisimBilgileri.Controls);
-            FormValidateIslemi(gb_KimlikBilgileir.Controls);
-            FormValidateIslemi(Controls);
+            //FormValidateIslemi(gb_IletisimBilgileri.Controls);
+            //FormValidateIslemi(gb_KimlikBilgileir.Controls);
+            //FormValidateIslemi(Controls);
 
-            if (errorProvider1.HasErrors==false)
+            if (errorProvider1.HasErrors == false)
             {
                 Islem.KullaniciDTO yeniKullanici = new Islem.KullaniciDTO();
                 yeniKullanici.Ad = tb_Ad.Text;
@@ -124,13 +135,13 @@ namespace Ornek1
 
         private void tetxBox_dogrulama_Validating(object sender, CancelEventArgs e)
         {
-            
+
             var metinKutusu = sender as TextBox;
-            if (string.IsNullOrWhiteSpace(metinKutusu.Text) && metinKutusu.Tag=="zorunlu")
+            if (string.IsNullOrWhiteSpace(metinKutusu.Text) && metinKutusu.Tag == "zorunlu")
             {
                 //metinKutusu.BackColor = Color.Pink;
                 //formDoluMu = false;
-                errorProvider1.SetError(metinKutusu,"Bu alan boş geçilemez");
+                errorProvider1.SetError(metinKutusu, "Bu alan boş geçilemez");
             }
             else
             {
@@ -140,6 +151,11 @@ namespace Ornek1
             }
         }
 
-
+        private void KullaniciKayit_Load(object sender, EventArgs e)
+        {
+            textbox_ValidateOlayiEkle(gb_IletisimBilgileri.Controls);
+            textbox_ValidateOlayiEkle(gb_KimlikBilgileir.Controls);
+            textbox_ValidateOlayiEkle(Controls);
+        }
     }
 }

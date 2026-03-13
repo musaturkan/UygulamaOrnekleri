@@ -74,12 +74,11 @@
             // 
             // tb_Ad
             // 
-            tb_Ad.Location = new Point(51, 23);
+            tb_Ad.Location = new Point(66, 23);
             tb_Ad.Name = "tb_Ad";
-            tb_Ad.Size = new Size(276, 23);
+            tb_Ad.Size = new Size(240, 23);
             tb_Ad.TabIndex = 2;
             tb_Ad.Tag = "zorunlu";
-            tb_Ad.Validating += tetxBox_dogrulama_Validating;
             // 
             // tb_Soyad
             // 
@@ -88,7 +87,6 @@
             tb_Soyad.Size = new Size(251, 23);
             tb_Soyad.TabIndex = 3;
             tb_Soyad.Tag = "zorunlu";
-            tb_Soyad.Validating += tetxBox_dogrulama_Validating;
             // 
             // label3
             // 
@@ -140,7 +138,6 @@
             tb_Adres.Name = "tb_Adres";
             tb_Adres.Size = new Size(264, 151);
             tb_Adres.TabIndex = 9;
-            tb_Adres.Validating += tetxBox_dogrulama_Validating;
             // 
             // label5
             // 
@@ -158,7 +155,6 @@
             tb_Eposta.Size = new Size(263, 23);
             tb_Eposta.TabIndex = 11;
             tb_Eposta.Tag = "zorunlu";
-            tb_Eposta.Validating += tetxBox_dogrulama_Validating;
             // 
             // gb_IletisimBilgileri
             // 
@@ -167,7 +163,7 @@
             gb_IletisimBilgileri.Controls.Add(tb_Eposta);
             gb_IletisimBilgileri.Controls.Add(lbl_Adres);
             gb_IletisimBilgileri.Controls.Add(label5);
-            gb_IletisimBilgileri.Location = new Point(84, 181);
+            gb_IletisimBilgileri.Location = new Point(83, 181);
             gb_IletisimBilgileri.Name = "gb_IletisimBilgileri";
             gb_IletisimBilgileri.Size = new Size(362, 255);
             gb_IletisimBilgileri.TabIndex = 12;
@@ -187,7 +183,7 @@
             gb_KimlikBilgileir.Controls.Add(label3);
             gb_KimlikBilgileir.Location = new Point(83, 12);
             gb_KimlikBilgileir.Name = "gb_KimlikBilgileir";
-            gb_KimlikBilgileir.Size = new Size(922, 159);
+            gb_KimlikBilgileir.Size = new Size(673, 159);
             gb_KimlikBilgileir.TabIndex = 13;
             gb_KimlikBilgileir.TabStop = false;
             gb_KimlikBilgileir.Text = "groupBox1";
@@ -195,7 +191,7 @@
             // btn_KullaniciEkle
             // 
             btn_KullaniciEkle.BackColor = Color.SeaGreen;
-            btn_KullaniciEkle.Location = new Point(523, 336);
+            btn_KullaniciEkle.Location = new Point(569, 336);
             btn_KullaniciEkle.Name = "btn_KullaniciEkle";
             btn_KullaniciEkle.Size = new Size(118, 100);
             btn_KullaniciEkle.TabIndex = 14;
@@ -214,13 +210,12 @@
             // 
             // tb_Maas
             // 
-            tb_Maas.Location = new Point(847, 194);
+            tb_Maas.Location = new Point(569, 224);
             tb_Maas.Name = "tb_Maas";
-            tb_Maas.Size = new Size(139, 23);
+            tb_Maas.Size = new Size(246, 23);
             tb_Maas.TabIndex = 16;
             tb_Maas.Tag = "zorunlu";
             tb_Maas.KeyPress += tb_Maas_KeyPress;
-            tb_Maas.Validating += tetxBox_dogrulama_Validating;
             // 
             // nup_Maas
             // 
@@ -246,6 +241,7 @@
             Controls.Add(gb_IletisimBilgileri);
             Name = "KullaniciKayit";
             Text = "KullaniciKayit";
+            Load += KullaniciKayit_Load;
             gb_IletisimBilgileri.ResumeLayout(false);
             gb_IletisimBilgileri.PerformLayout();
             gb_KimlikBilgileir.ResumeLayout(false);
