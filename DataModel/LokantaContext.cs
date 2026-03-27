@@ -24,7 +24,14 @@ namespace DataModel
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {    
             //string connectionString = ConfigurationManager.ConnectionStrings["LokantaConnection"].ConnectionString;
-            optionsBuilder.UseSqlServer(@"Server=LAB708-PC;Database=Lokanta;Trusted_Connection=True;TrustServerCertificate=True");
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json")
+                .Build();
+            string connectionString = configuration.GetConnectionString("DefaultConnection");
+            //string connectionString2 = AyarYonetim.DbAyar.GetConnectionString("LokantaConnection");
+            optionsBuilder.UseSqlServer(connectionString);
+            //optionsBuilder.UseSqlServer(@"Server=LAB708-PC;Database=Lokanta;Trusted_Connection=True;TrustServerCertificate=True");
             //optionsBuilder.UseSqlServer(connectionString);
         }
 
