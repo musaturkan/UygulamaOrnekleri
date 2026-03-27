@@ -33,6 +33,7 @@ namespace Lokanta
             MasaSiparisAlma masaSiparisAlma = new MasaSiparisAlma(); // MasaSiparisAlma formuna tıklanan masanın bilgilerini gönderiyoruz.
             masaSiparisAlma.masaBilgi = masaNesne; // MasaSiparisAlma formunun masaBilgi özelliğine tıklanan masanın bilgilerini atıyoruz.
             masaSiparisAlma.ShowDialog(); // MasaSiparisAlma formunu açıyoruz.
+            //yeni satır kelmendiaeiu a
         }
         private void MasaSiparis_Load(object sender, EventArgs e)
         {
