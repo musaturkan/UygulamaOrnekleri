@@ -14,15 +14,16 @@ namespace DataModel
     /// Bu sınıf, Entity Framework Core tarafından veritabanı işlemleri için kullanılır.
     /// Bu sınıf içindeki her DbSet<T> bildirimi veri tabanındaki bir tabloya karşılık gelir
     /// </summary>
-    public class LokantaContext:DbContext
+    public class LokantaContext : DbContext
     {
-       public DbSet<Kullanici> Kullanici { get; set; }
+        public DbSet<Kullanici> Kullanici { get; set; }
 
+        public DbSet<Masa> Masa { get; set; }
 
         ///Veri tabanı bağlantı işlemleri için OnConfiguring metodu kullanılır. Bu metod içinde UseSqlServer gibi bir yöntemle veritabanı bağlantı dizesi sağlanır.
         ///
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {    
+        {
             //string connectionString = ConfigurationManager.ConnectionStrings["LokantaConnection"].ConnectionString;
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)

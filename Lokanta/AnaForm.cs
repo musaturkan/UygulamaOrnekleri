@@ -11,5 +11,11 @@ namespace Lokanta
         {
 
         }
+
+        private void btn_Masa_Click(object sender, EventArgs e)
+        {
+            MasaSiparis masaSiparis = new MasaSiparis();
+            masaSiparis.ShowDialog();
+        }
     }
 }
