@@ -1,9 +1,11 @@
 ﻿using DataModel;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Islem
 {
@@ -33,6 +35,34 @@ namespace Islem
             LokantaContext context = new LokantaContext();
             var yemekler = context.Yemek.ToList();
             return yemekler;
+        }
+
+        public void SiparisEkle(SiparisDTO siparis)
+        {
+            LokantaContext context = new LokantaContext();
+
+            var yeniSiparis = DtoMapper.DtoToEntity<Siparis, SiparisDTO>(siparis);
+
+            context.Siparis.Add(yeniSiparis);
+            context.SaveChanges();
+        }
+
+        public List<SiparisListeDTO> MasaAktifSiparisGetir(int masaId)
+        {
+            LokantaContext context = new LokantaContext();
+            var siparisler = context.Siparis
+                                    //.Include("Yemek")
+                                    .Include(p=>p.Yemek)
+                                    .Where(w => w.MasaId == masaId && w.AktifMi == true)
+                                    .Select(s => new SiparisListeDTO
+                                    {
+                                        Id = s.Id,
+                                        YemekAdi = s.Yemek.Ad,
+                                        Fiyat = s.Yemek.Fiyat,
+                                        Tarih = s.Tarih
+                                    })
+                                    .ToList();
+            return siparisler;
         }
     }
 }

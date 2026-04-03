@@ -21,6 +21,7 @@ namespace DataModel
         public DbSet<Masa> Masa { get; set; }
 
         public DbSet<Yemek> Yemek { get; set; }
+        public DbSet<Siparis> Siparis { get; set; }
 
         ///Veri tabanı bağlantı işlemleri için OnConfiguring metodu kullanılır. Bu metod içinde UseSqlServer gibi bir yöntemle veritabanı bağlantı dizesi sağlanır.
         ///

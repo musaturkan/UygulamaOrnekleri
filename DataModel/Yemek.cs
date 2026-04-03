@@ -12,9 +12,10 @@ namespace DataModel
         [Key]
         public int Id { get; set; }
         public  string? Ad { get; set; }
-        public float? Fiyat { get; set; }
+        public decimal? Fiyat { get; set; }
         public int? YemekTurId { get; set; }
         public int? Kalori { get; set; }
+        public ICollection<Siparis>? Siparis { get; set; }
 
     }
 }

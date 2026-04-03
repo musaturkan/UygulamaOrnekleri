@@ -31,6 +31,9 @@
             lbl_siparisalmaformbaslik = new Label();
             cb_YemekListe = new ComboBox();
             btn_SiparisEkle = new Button();
+            dgv_AktifMasaSiparisleri = new DataGridView();
+            lbl_AktifSiparis = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgv_AktifMasaSiparisleri).BeginInit();
             SuspendLayout();
             // 
             // lbl_siparisalmaformbaslik
@@ -67,18 +70,42 @@
             btn_SiparisEkle.TabIndex = 2;
             btn_SiparisEkle.Text = "Ekle";
             btn_SiparisEkle.UseVisualStyleBackColor = false;
+            btn_SiparisEkle.Click += btn_SiparisEkle_Click;
+            // 
+            // dgv_AktifMasaSiparisleri
+            // 
+            dgv_AktifMasaSiparisleri.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_AktifMasaSiparisleri.DataMember = "SiparisListeDTO";
+            dgv_AktifMasaSiparisleri.Location = new Point(12, 248);
+            dgv_AktifMasaSiparisleri.Name = "dgv_AktifMasaSiparisleri";
+            dgv_AktifMasaSiparisleri.Size = new Size(734, 353);
+            dgv_AktifMasaSiparisleri.TabIndex = 3;
+            // 
+            // lbl_AktifSiparis
+            // 
+            lbl_AktifSiparis.AutoSize = true;
+            lbl_AktifSiparis.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lbl_AktifSiparis.ForeColor = SystemColors.Highlight;
+            lbl_AktifSiparis.Location = new Point(13, 207);
+            lbl_AktifSiparis.Name = "lbl_AktifSiparis";
+            lbl_AktifSiparis.Size = new Size(171, 21);
+            lbl_AktifSiparis.TabIndex = 4;
+            lbl_AktifSiparis.Text = "Aktif Masa Siparisleri";
             // 
             // MasaSiparisAlma
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(758, 613);
+            Controls.Add(lbl_AktifSiparis);
+            Controls.Add(dgv_AktifMasaSiparisleri);
             Controls.Add(btn_SiparisEkle);
             Controls.Add(cb_YemekListe);
             Controls.Add(lbl_siparisalmaformbaslik);
             Name = "MasaSiparisAlma";
             Text = "MasaSiparisAlma";
             Load += MasaSiparisAlma_Load;
+            ((System.ComponentModel.ISupportInitialize)dgv_AktifMasaSiparisleri).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -88,5 +115,7 @@
         private Label lbl_siparisalmaformbaslik;
         private ComboBox cb_YemekListe;
         private Button btn_SiparisEkle;
+        private DataGridView dgv_AktifMasaSiparisleri;
+        private Label lbl_AktifSiparis;
     }
 }
