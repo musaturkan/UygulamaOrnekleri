@@ -26,14 +26,18 @@ namespace Lokanta
         private void Masa_Buton_Click(object sender, EventArgs e)
         {
             ///hangi masa tıklandıysa ona göre işlem yapılacak.
-            
+           
             var tiklananButon = sender as Button;
-            var masaNesne = tiklananButon.Tag as MasaDTO; // Butonun Tag özelliğinden masa bilgilerini alıyoruz.
-            //MessageBox.Show($"{masaNesne.Ad} Masa butonuna tıklandı! {masaNesne.Id}"); // Burada hangi masanın tıklandığını göstermek için bir mesaj kutusu açıyoruz.
-            MasaSiparisAlma masaSiparisAlma = new MasaSiparisAlma(); // MasaSiparisAlma formuna tıklanan masanın bilgilerini gönderiyoruz.
-            masaSiparisAlma.masaBilgi = masaNesne; // MasaSiparisAlma formunun masaBilgi özelliğine tıklanan masanın bilgilerini atıyoruz.
+            var masaNesne = tiklananButon.Tag as MasaDTO; /// Butonun Tag özelliğinden masa bilgilerini alıyoruz.
+           
+            MasaSiparisAlma masaSiparisAlma = new MasaSiparisAlma(masaNesne); // MasaSiparisAlma formuna tıklanan masanın bilgilerini gönderiyoruz.
             masaSiparisAlma.ShowDialog(); // MasaSiparisAlma formunu açıyoruz.
-            //yeni satır kelmendiaeiu a
+            
+            
+            //masaSiparisAlma.masaBilgi = masaNesne; // MasaSiparisAlma formunun masaBilgi özelliğine tıklanan masanın bilgilerini atıyoruz.
+            
+            //yeni satır kelmendiaeiu a //MessageBox.Show($"{masaNesne.Ad} Masa butonuna tıklandı! {masaNesne.Id}"); 
+            // Burada hangi masanın tıklandığını göstermek için bir mesaj kutusu açıyoruz
         }
         private void MasaSiparis_Load(object sender, EventArgs e)
         {
@@ -62,11 +66,11 @@ namespace Lokanta
                 foreach (var siradakimasa in masalar)
                 {                  
                 
-                    if (sayac%5==0)
-                    {
-                        xkonum = 100;                            
-                        ykonum += 100;
-                    }
+                    //if (sayac%5==0)
+                    //{
+                    //    xkonum = 100;                            
+                    //    ykonum += 100;
+                    //}
                     Button button = new Button();
                     button.Text = siradakimasa.Ad;
                     button.Height = 100;
@@ -74,12 +78,13 @@ namespace Lokanta
                     button.FlatStyle = FlatStyle.Flat;
                     button.BackColor = Color.DarkRed;
                     button.ForeColor = Color.White;
-                    button.Location = new Point(xkonum, ykonum);
+                    //button.Location = new Point(xkonum, ykonum);
                     button.Click += Masa_Buton_Click;
                     button.Tag = siradakimasa; // Butona masanın ID'sini ekleyelim, böylece tıklandığında hangi masa olduğunu anlayabiliriz.
-                    xkonum += 100;   
-                    sayac += 1;
-                    Controls.Add(button);
+                    //xkonum += 100;   
+                    //sayac += 1;
+                    //Controls.Add(button);
+                    flp_MasaSiparis.Controls.Add(button);
                 }
             }
         }

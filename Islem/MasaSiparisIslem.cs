@@ -27,5 +27,12 @@ namespace Islem
 
             return masalar;
         }
+
+        public List<Yemek> YemekListeGetir()
+        {
+            LokantaContext context = new LokantaContext();
+            var yemekler = context.Yemek.ToList();
+            return yemekler;
+        }
     }
 }
