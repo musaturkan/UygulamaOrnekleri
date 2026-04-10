@@ -17,7 +17,8 @@ namespace Lokanta
         private void btn_Masa_Click(object sender, EventArgs e)
         {
            // MasaSiparis masaSiparis = new MasaSiparis();
-            MasaSiparis masaSiparis=Program.serviceProvider.GetService<MasaSiparis>();
+            MasaSiparis masaSiparis = Program.serviceProvider.GetRequiredService<MasaSiparis>(); // Program.serviceProvider.GetService<MasaSiparis>();
+           
             masaSiparis.ShowDialog();
         }
     }

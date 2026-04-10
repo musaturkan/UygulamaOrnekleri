@@ -16,12 +16,12 @@ namespace Lokanta
     public partial class MasaSiparisAlma : Form
     {
         private IServiceProvider serviceProvider;
-        MasaDTO masaBilgi { get; set; }
-        public MasaSiparisAlma(MasaDTO Masa, IServiceProvider serviceProvider)
+        public MasaDTO masaBilgi { get; set; }
+        public MasaSiparisAlma( IServiceProvider _serviceProvider)
         {
-            masaBilgi = Masa;
+            //masaBilgi = Masa;
             InitializeComponent();
-            this.serviceProvider = serviceProvider;
+            serviceProvider = _serviceProvider;
         }
 
         private void MasaSiparisAlma_Load(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace Lokanta
             /// Burada entity sorguları doğrudan yapılmaz
             /// Entiy sorguları işlem katmanında yapılır.
             /// 
-            MasaSiparisIslem masaIslem = serviceProvider.GetService<MasaSiparisIslem>();//new MasaSiparisIslem();
+            MasaSiparisIslem masaIslem = serviceProvider.GetRequiredService<MasaSiparisIslem>();//new MasaSiparisIslem();
             
             var yemekListesi = masaIslem.YemekListeGetir();
             cb_YemekListe.DataSource = yemekListesi;

@@ -14,9 +14,11 @@ namespace Lokanta
 {
     public partial class MasaSiparis : Form
     {
-        public MasaSiparis()
+        IServiceProvider serviceProvider;
+        public MasaSiparis(IServiceProvider _serviceProvider)
         {
             InitializeComponent();
+            serviceProvider = _serviceProvider;
         }
 
         //private void DinamikButonClick(object sender, EventArgs e)
@@ -31,7 +33,11 @@ namespace Lokanta
             var tiklananButon = sender as Button;
             var masaNesne = tiklananButon.Tag as MasaDTO; /// Butonun Tag özelliğinden masa bilgilerini alıyoruz.
 
-            MasaSiparisAlma masaSiparisAlma = new MasaSiparisAlma(masaNesne); // MasaSiparisAlma formuna tıklanan masanın bilgilerini gönderiyoruz.
+            //MasaSiparisAlma masaSiparisAlma = new MasaSiparisAlma(masaNesne); // MasaSiparisAlma formuna tıklanan masanın bilgilerini gönderiyoruz.
+            //MasaSiparisAlma masaSiparisAlma = Program.serviceProvider.GetRequiredService<MasaSiparisAlma>();
+            //Provider nesensine yapıcı metot ile erişmek daha profesyonel bir yaklaşımdır
+            MasaSiparisAlma masaSiparisAlma = serviceProvider.GetRequiredService<MasaSiparisAlma>();
+            masaSiparisAlma.masaBilgi = masaNesne;
 
             //MasaSiparisAlma masaSiparisAlma = Program.serviceProvider.GetService<MasaSiparisAlma>();
             // Dependency Injection kullanarak MasaSiparisAlma formunu alıyoruz.
@@ -59,7 +65,8 @@ namespace Lokanta
 
             //Controls.Add(yeniButton); // Butonu forma ekleyin
 
-            MasaSiparisIslem masaIslem = new MasaSiparisIslem();
+            //MasaSiparisIslem masaIslem = new MasaSiparisIslem();
+            MasaSiparisIslem masaIslem = Program.serviceProvider.GetRequiredService<MasaSiparisIslem>();
             var masalar = masaIslem.MasaListeGetir();
             int xkonum = 100;
             int ykonum = 100;
