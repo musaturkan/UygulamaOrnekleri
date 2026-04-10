@@ -1,0 +1,8 @@
+Forma Dinamik Kontrol Ekleme
+Dinamik Eklenen Kontrollere Olay Atamak
+Yeni bir ilişkili entity eklemek
+DTO Nesnesi Nedir? Ne için kullanılır?
+Entity Sorguları, gruplama sorgusu, filtreleme, linq sorgulama, create, read, update, detele, ekleme, silme, güncelleme, seçme
+Web Api çağrısı oluşturma
+Bir formdaki kontrole başka bir form içinde erişebilmek için kontrolün hangi özelliği public yapılmalıdır?
+Kotrolin Modifier özelliği hangisi ile işaretlenmelidir?

@@ -1,0 +1,6 @@
+Formlar Arasında Veri Taşımak
+
+https://gelecegiyazanlar.turkcell.com.tr/konu/egitim/c-form-ile-gorsel-ve-nesne-tabanli-programlama-101/formlar-arasi-veri-tasima-islemi
+https://mustafabukulmez.com/2020/06/20/c-formlar-arasi-veri-aktarimi/
+https://mustafabukulmez.com/2018/01/22/c-formlar-arasi-veri-nasil-gonderilir/
+https://www.kodlamamerkezi.com/c-net/csharp-formlar-arasi-veri-gonderme-islemi/
