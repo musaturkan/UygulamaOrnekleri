@@ -1,4 +1,5 @@
 ﻿using Islem;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,8 +30,11 @@ namespace Lokanta
            
             var tiklananButon = sender as Button;
             var masaNesne = tiklananButon.Tag as MasaDTO; /// Butonun Tag özelliğinden masa bilgilerini alıyoruz.
-           
+
             MasaSiparisAlma masaSiparisAlma = new MasaSiparisAlma(masaNesne); // MasaSiparisAlma formuna tıklanan masanın bilgilerini gönderiyoruz.
+
+            //MasaSiparisAlma masaSiparisAlma = Program.serviceProvider.GetService<MasaSiparisAlma>();
+            // Dependency Injection kullanarak MasaSiparisAlma formunu alıyoruz.
             masaSiparisAlma.ShowDialog(); // MasaSiparisAlma formunu açıyoruz.
             
             

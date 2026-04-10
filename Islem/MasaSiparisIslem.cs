@@ -64,5 +64,16 @@ namespace Islem
                                     .ToList();
             return siparisler;
         }
+
+        public void SiparisSil(int siparisId)
+        {
+            LokantaContext context = new LokantaContext();
+            var silinecekSiparis = context.Siparis.Find(siparisId);
+            if (silinecekSiparis != null)
+            {
+                context.Siparis.Remove(silinecekSiparis);
+                context.SaveChanges();
+            }
+        }
     }
 }

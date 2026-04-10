@@ -1,5 +1,6 @@
 ﻿using DataModel;
 using Islem;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,13 @@ namespace Lokanta
 {
     public partial class MasaSiparisAlma : Form
     {
+        private IServiceProvider serviceProvider;
         MasaDTO masaBilgi { get; set; }
-        public MasaSiparisAlma(MasaDTO Masa)
+        public MasaSiparisAlma(MasaDTO Masa, IServiceProvider serviceProvider)
         {
             masaBilgi = Masa;
             InitializeComponent();
+            this.serviceProvider = serviceProvider;
         }
 
         private void MasaSiparisAlma_Load(object sender, EventArgs e)
@@ -30,7 +33,8 @@ namespace Lokanta
             /// Burada entity sorguları doğrudan yapılmaz
             /// Entiy sorguları işlem katmanında yapılır.
             /// 
-            MasaSiparisIslem masaIslem = new MasaSiparisIslem();
+            MasaSiparisIslem masaIslem = serviceProvider.GetService<MasaSiparisIslem>();//new MasaSiparisIslem();
+            
             var yemekListesi = masaIslem.YemekListeGetir();
             cb_YemekListe.DataSource = yemekListesi;
             dgv_AktifMasaSiparisleri.DataSource = masaIslem.MasaAktifSiparisGetir(masaBilgi.Id);
@@ -38,7 +42,7 @@ namespace Lokanta
 
         private void btn_SiparisEkle_Click(object sender, EventArgs e)
         {
-            MasaSiparisIslem masaSiparis = new MasaSiparisIslem();
+            MasaSiparisIslem masaSiparis = Program.serviceProvider.GetService<MasaSiparisIslem>();//new MasaSiparisIslem();
             SiparisDTO yeniSiparis = new SiparisDTO();
             yeniSiparis.MasaId = masaBilgi.Id;
             yeniSiparis.YemekId = (cb_YemekListe.SelectedItem as Yemek).Id;
@@ -54,6 +58,12 @@ namespace Lokanta
         private void btn_SiparisSil_Click(object sender, EventArgs e)
         {
             SiparisListeDTO secilenSiparis = dgv_AktifMasaSiparisleri.CurrentRow.DataBoundItem as SiparisListeDTO;
+            if (secilenSiparis != null)
+            {
+                MasaSiparisIslem masaSiparis = new MasaSiparisIslem();
+                masaSiparis.SiparisSil(secilenSiparis.Id);
+                dgv_AktifMasaSiparisleri.DataSource = masaSiparis.MasaAktifSiparisGetir(masaBilgi.Id);
+            }
         }
     }
 }
