@@ -47,8 +47,13 @@ namespace Lokanta
             yeniSiparis.YemekId = cb_YemekListe.SelectedValue as int?;
 
             masaSiparis.SiparisEkle(yeniSiparis);
-       
+
             dgv_AktifMasaSiparisleri.DataSource = masaSiparis.MasaAktifSiparisGetir(masaBilgi.Id);
+        }
+
+        private void btn_SiparisSil_Click(object sender, EventArgs e)
+        {
+            SiparisListeDTO secilenSiparis = dgv_AktifMasaSiparisleri.CurrentRow.DataBoundItem as SiparisListeDTO;
         }
     }
 }

@@ -33,6 +33,7 @@
             btn_SiparisEkle = new Button();
             dgv_AktifMasaSiparisleri = new DataGridView();
             lbl_AktifSiparis = new Label();
+            btn_SiparisSil = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_AktifMasaSiparisleri).BeginInit();
             SuspendLayout();
             // 
@@ -92,11 +93,25 @@
             lbl_AktifSiparis.TabIndex = 4;
             lbl_AktifSiparis.Text = "Aktif Masa Siparisleri";
             // 
+            // btn_SiparisSil
+            // 
+            btn_SiparisSil.BackColor = Color.Red;
+            btn_SiparisSil.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btn_SiparisSil.ForeColor = SystemColors.ButtonHighlight;
+            btn_SiparisSil.Location = new Point(647, 207);
+            btn_SiparisSil.Name = "btn_SiparisSil";
+            btn_SiparisSil.Size = new Size(99, 38);
+            btn_SiparisSil.TabIndex = 5;
+            btn_SiparisSil.Text = "SİL";
+            btn_SiparisSil.UseVisualStyleBackColor = false;
+            btn_SiparisSil.Click += btn_SiparisSil_Click;
+            // 
             // MasaSiparisAlma
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(758, 613);
+            Controls.Add(btn_SiparisSil);
             Controls.Add(lbl_AktifSiparis);
             Controls.Add(dgv_AktifMasaSiparisleri);
             Controls.Add(btn_SiparisEkle);
@@ -117,5 +132,6 @@
         private Button btn_SiparisEkle;
         private DataGridView dgv_AktifMasaSiparisleri;
         private Label lbl_AktifSiparis;
+        private Button btn_SiparisSil;
     }
 }
