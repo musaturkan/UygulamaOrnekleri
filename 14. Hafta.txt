@@ -1,0 +1,26 @@
+Temel C# Programlama
+ -Döngüler, karar yapıları, liste, değişkenler
+Metot İmzası Nedir
+Sınıf oluşturma, Namespace Kavramı
+Constructer Metot nedir? Yapıcı metot nedir?
+Başka bir sınıftan türetme
+Override İşlemi
+Virtual Metotlar
+Erişim belirteçleri
+Absract Sınıflar
+Interface tanımlama
+Interfaceden sınıf türetme
+OOP Kavramları
+Generic Kavramı https://www.tutorialsteacher.com/csharp/csharp-generics
+Generic metot oluşturma
+Generic sınıf tanımlama
+Windows Form Kontrollerinin Kullanımı
+Kontrolün sahip olduğu olaylara komut
+Dinamik kontrol oluşturma
+EntityFramework ile çalışmak
+Entity nesnelerini tanımlamak
+WebRequest ile Web APIlere istekte bulunmak
+--https://medium.com/@fdikmen/solid-prensipleri-7eeca8dbb499
+Dependency Inversion Prensibi
+Polimporphism Çok Biçimlilik
+
