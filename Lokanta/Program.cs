@@ -27,7 +27,7 @@ namespace Lokanta
             services.AddTransient<AnaForm>();
             services.AddTransient<MasaSiparis>();
             services.AddTransient<MasaSiparisAlma>();
-            services.AddTransient<MasaSiparisIslem>();
+            services.AddTransient<IMasaSiparisIslem, MasaSiparisIslem>();
             serviceProvider = services.BuildServiceProvider();
             ///DI containerdaki servisleri servisprovider üzerinden alarak kullanabiliriz
 

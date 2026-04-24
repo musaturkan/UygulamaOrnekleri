@@ -7,10 +7,15 @@ using System.Threading.Tasks;
 
 namespace Islem
 {
+
+    public interface IKullaniciIslem
+    {
+        bool KullaniciEkle(KullaniciDTO yeniKullanici);
+    }
     /// <summary>
     /// Kullanıcı veri işlemlerini yapacak olan sınftır
     /// </summary>
-    public class KullaniciIslem
+    public class KullaniciIslem:IKullaniciIslem
     {
         public bool KullaniciEkle(KullaniciDTO yeniKullanici)
         {

@@ -14,11 +14,17 @@ namespace Lokanta
 {
     public partial class MasaSiparis : Form
     {
-        IServiceProvider serviceProvider;
-        public MasaSiparis(IServiceProvider _serviceProvider)
+        private IServiceProvider serviceProvider;
+        private MasaSiparisAlma masaSiparisAlma;
+        private IMasaSiparisIslem masaIslem;
+        public MasaSiparis(IServiceProvider _serviceProvider, 
+                            MasaSiparisAlma _masaSiparisAlma, 
+                            IMasaSiparisIslem _masaSiparisIslem)
         {
             InitializeComponent();
             serviceProvider = _serviceProvider;
+            masaSiparisAlma = _masaSiparisAlma;
+            masaIslem = _masaSiparisIslem;
         }
 
         //private void DinamikButonClick(object sender, EventArgs e)
@@ -36,7 +42,7 @@ namespace Lokanta
             //MasaSiparisAlma masaSiparisAlma = new MasaSiparisAlma(masaNesne); // MasaSiparisAlma formuna tıklanan masanın bilgilerini gönderiyoruz.
             //MasaSiparisAlma masaSiparisAlma = Program.serviceProvider.GetRequiredService<MasaSiparisAlma>();
             //Provider nesensine yapıcı metot ile erişmek daha profesyonel bir yaklaşımdır
-            MasaSiparisAlma masaSiparisAlma = serviceProvider.GetRequiredService<MasaSiparisAlma>();
+            //MasaSiparisAlma masaSiparisAlma = serviceProvider.GetRequiredService<MasaSiparisAlma>();
             masaSiparisAlma.masaBilgi = masaNesne;
 
             //MasaSiparisAlma masaSiparisAlma = Program.serviceProvider.GetService<MasaSiparisAlma>();
@@ -66,7 +72,7 @@ namespace Lokanta
             //Controls.Add(yeniButton); // Butonu forma ekleyin
 
             //MasaSiparisIslem masaIslem = new MasaSiparisIslem();
-            MasaSiparisIslem masaIslem = Program.serviceProvider.GetRequiredService<MasaSiparisIslem>();
+            //MasaSiparisIslem masaIslem = Program.serviceProvider.GetRequiredService<MasaSiparisIslem>();
             var masalar = masaIslem.MasaListeGetir();
             int xkonum = 100;
             int ykonum = 100;

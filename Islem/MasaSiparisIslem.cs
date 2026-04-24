@@ -9,11 +9,21 @@ using System.Threading.Tasks;
 
 namespace Islem
 {
+
+    public interface IMasaSiparisIslem
+    {
+        List<MasaDTO> MasaListeGetir();
+        List<Yemek> YemekListeGetir();
+        void SiparisEkle(SiparisDTO siparis);
+        List<SiparisListeDTO> MasaAktifSiparisGetir(int masaId);
+        void SiparisSil(int siparisId);
+    }
+
     /// <summary>
     /// Masaların listeleme, sipariş alma, sipariş güncelleme, 
     /// sipariş kapatma gibi işlemler bu sınıf içinde yapılır
     /// </summary>
-    public class MasaSiparisIslem
+    public class MasaSiparisIslem:IMasaSiparisIslem
     {
         public List<MasaDTO> MasaListeGetir()
         {

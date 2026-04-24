@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Islem;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,13 @@ namespace Ornek1
 {
     public partial class KullaniciKayit : Form
     {
-        Islem.KullaniciIslem kullaniciIslem = new Islem.KullaniciIslem();
+        //Islem.KullaniciIslem kullaniciIslem = new Islem.KullaniciIslem();
+        IKullaniciIslem kullaniciIslem;
         //bool formDoluMu = true;
-        public KullaniciKayit()
+        public KullaniciKayit(IKullaniciIslem _kullaniciIslem)
         {
             InitializeComponent();
+            kullaniciIslem = _kullaniciIslem;
         }
 
         /// <summary>
