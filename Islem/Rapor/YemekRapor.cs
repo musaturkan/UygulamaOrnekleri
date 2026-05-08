@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Islem.Rapor
 {
     public class YemekRapor : IYemekRapor
-    {
+    {    
         public void MasaRaporuOlustur()
         {
 
