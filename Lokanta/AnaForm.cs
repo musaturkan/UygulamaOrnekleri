@@ -57,8 +57,10 @@ namespace Lokanta
             lbl_hava_durumu.Text = havaBilgisi;
         }
 
+        ///
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ///Buradaki servis çaðýrsýný DI container üzerinden alacak þekilde düzenleyiniz.
             Islem.WebAPI.GeoCodingApiServis geoCodingApiServis = new Islem.WebAPI.GeoCodingApiServis();
             //var sehir = geoCodingApiServis.AdresToKoordinatAsync("Ankara").Result;
             //var bilgi = sehir.results.FirstOrDefault();
