@@ -32,7 +32,7 @@
             gb_anaEkran = new GroupBox();
             btn_rapor4 = new Button();
             btn_rapor3 = new Button();
-            btn_rapor2 = new Button();
+            btn_yemek_raporu = new Button();
             btn_rapor1 = new Button();
             btn_kasaIslemleri = new Button();
             btn_musteriler = new Button();
@@ -47,7 +47,7 @@
             // 
             gb_anaEkran.Controls.Add(btn_rapor4);
             gb_anaEkran.Controls.Add(btn_rapor3);
-            gb_anaEkran.Controls.Add(btn_rapor2);
+            gb_anaEkran.Controls.Add(btn_yemek_raporu);
             gb_anaEkran.Controls.Add(btn_rapor1);
             gb_anaEkran.Controls.Add(btn_kasaIslemleri);
             gb_anaEkran.Controls.Add(btn_musteriler);
@@ -88,18 +88,19 @@
             btn_rapor3.Text = "Satış Raporu";
             btn_rapor3.UseVisualStyleBackColor = false;
             // 
-            // btn_rapor2
+            // btn_yemek_raporu
             // 
-            btn_rapor2.BackColor = Color.OrangeRed;
-            btn_rapor2.FlatAppearance.BorderColor = Color.OrangeRed;
-            btn_rapor2.FlatStyle = FlatStyle.Flat;
-            btn_rapor2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btn_rapor2.Location = new Point(150, 283);
-            btn_rapor2.Name = "btn_rapor2";
-            btn_rapor2.Size = new Size(118, 104);
-            btn_rapor2.TabIndex = 7;
-            btn_rapor2.Text = "Yemek Raporu";
-            btn_rapor2.UseVisualStyleBackColor = false;
+            btn_yemek_raporu.BackColor = Color.OrangeRed;
+            btn_yemek_raporu.FlatAppearance.BorderColor = Color.OrangeRed;
+            btn_yemek_raporu.FlatStyle = FlatStyle.Flat;
+            btn_yemek_raporu.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btn_yemek_raporu.Location = new Point(150, 283);
+            btn_yemek_raporu.Name = "btn_yemek_raporu";
+            btn_yemek_raporu.Size = new Size(118, 104);
+            btn_yemek_raporu.TabIndex = 7;
+            btn_yemek_raporu.Text = "Yemek Raporu";
+            btn_yemek_raporu.UseVisualStyleBackColor = false;
+            btn_yemek_raporu.Click += btn_yemek_raporu_Click;
             // 
             // btn_rapor1
             // 
@@ -222,7 +223,7 @@
         private Button btn_Mutfak;
         private Button btn_rapor4;
         private Button btn_rapor3;
-        private Button btn_rapor2;
+        private Button btn_yemek_raporu;
         private Button btn_rapor1;
     }
 }

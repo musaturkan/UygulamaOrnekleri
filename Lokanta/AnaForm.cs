@@ -1,11 +1,14 @@
+using Islem.Rapor;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Lokanta
 {
     public partial class AnaForm : Form
     {
-        public AnaForm()
+        IYemekRapor yemekRapor;
+        public AnaForm(IYemekRapor _yemekRapor)
         {
+            yemekRapor = _yemekRapor;
             InitializeComponent();
         }
 
@@ -16,10 +19,20 @@ namespace Lokanta
 
         private void btn_Masa_Click(object sender, EventArgs e)
         {
-           // MasaSiparis masaSiparis = new MasaSiparis();
+            // MasaSiparis masaSiparis = new MasaSiparis();
             MasaSiparis masaSiparis = Program.serviceProvider.GetRequiredService<MasaSiparis>(); // Program.serviceProvider.GetService<MasaSiparis>();
-           
+
             masaSiparis.ShowDialog();
+        }
+
+        private void btn_yemek_raporu_Click(object sender, EventArgs e)
+        {
+            ///her bir yemekten kaç tane sipariþ verildiði raporu exel olarak kaydedilecek
+            ///Raporlama iþlemi çin rapor servisi çaðýrýlacak
+            //Islem.Rapor.YemekRapor yemekRapor = new Islem.Rapor.YemekRapor();
+            yemekRapor.YemekRaporuOlustur();
+
+            MessageBox.Show("Yemek raporu baþarýyla kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

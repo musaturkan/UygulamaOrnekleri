@@ -1,4 +1,5 @@
 using Islem;
+using Islem.Rapor;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Lokanta
@@ -28,6 +29,7 @@ namespace Lokanta
             services.AddTransient<MasaSiparis>();
             services.AddTransient<MasaSiparisAlma>();
             services.AddTransient<IMasaSiparisIslem, MasaSiparisIslem>();
+            services.AddTransient<IYemekRapor, YemekRapor>();
             serviceProvider = services.BuildServiceProvider();
             ///DI containerdaki servisleri servisprovider üzerinden alarak kullanabiliriz
 
