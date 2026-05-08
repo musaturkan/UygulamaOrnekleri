@@ -40,6 +40,7 @@
             button2 = new Button();
             button1 = new Button();
             btn_Masa = new Button();
+            lbl_hava_durumu = new Label();
             gb_anaEkran.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             gb_anaEkran.TabIndex = 0;
             gb_anaEkran.TabStop = false;
             gb_anaEkran.Text = "Yönetim İşlemleri";
+            gb_anaEkran.Enter += gb_anaEkran_Enter;
             // 
             // btn_rapor4
             // 
@@ -198,6 +200,16 @@
             btn_Masa.UseVisualStyleBackColor = false;
             btn_Masa.Click += btn_Masa_Click;
             // 
+            // lbl_hava_durumu
+            // 
+            lbl_hava_durumu.AutoSize = true;
+            lbl_hava_durumu.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lbl_hava_durumu.ForeColor = Color.Red;
+            lbl_hava_durumu.Location = new Point(266, 32);
+            lbl_hava_durumu.Name = "lbl_hava_durumu";
+            lbl_hava_durumu.Size = new Size(0, 25);
+            lbl_hava_durumu.TabIndex = 1;
+            // 
             // AnaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -205,11 +217,14 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1012, 591);
+            Controls.Add(lbl_hava_durumu);
             Controls.Add(gb_anaEkran);
             Name = "AnaForm";
             Text = "Lokanta";
+            Load += AnaForm_Load;
             gb_anaEkran.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -225,5 +240,6 @@
         private Button btn_rapor3;
         private Button btn_yemek_raporu;
         private Button btn_rapor1;
+        private Label lbl_hava_durumu;
     }
 }

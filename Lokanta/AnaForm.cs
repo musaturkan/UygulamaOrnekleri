@@ -34,5 +34,21 @@ namespace Lokanta
 
             MessageBox.Show("Yemek raporu baþarýyla kaydedildi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void gb_anaEkran_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AnaForm_Load(object sender, EventArgs e)
+        {
+            Islem.WebAPI.GeoCodingApiServis geoCodingApiServis = new Islem.WebAPI.GeoCodingApiServis();
+            var sehir = geoCodingApiServis.AdresToKoordinatAsync("Ankara").Result;
+            var bilgi = sehir.results.FirstOrDefault();
+            string koordinat = $"Enlem: {bilgi.latitude}, Boylam: {bilgi.longitude}";
+            string ad_nufus= $"Þehir: {bilgi.name}, Nüfus: {bilgi.population}";
+            lbl_hava_durumu.Text = ad_nufus+" "+koordinat;
+        }
+
     }
 }
