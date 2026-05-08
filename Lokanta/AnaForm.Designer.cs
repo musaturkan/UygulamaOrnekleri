@@ -41,6 +41,7 @@
             button1 = new Button();
             btn_Masa = new Button();
             lbl_hava_durumu = new Label();
+            comboBox1 = new ComboBox();
             gb_anaEkran.SuspendLayout();
             SuspendLayout();
             // 
@@ -210,6 +211,16 @@
             lbl_hava_durumu.Size = new Size(0, 25);
             lbl_hava_durumu.TabIndex = 1;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "İstanbul", "Bilecik", "Ankara", "Trabzon", "Hakkari", "Bakü", "Bosna", "Giresun", "Van", "Halep", "Ötüken" });
+            comboBox1.Location = new Point(859, 21);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 2;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // AnaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -217,6 +228,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1012, 591);
+            Controls.Add(comboBox1);
             Controls.Add(lbl_hava_durumu);
             Controls.Add(gb_anaEkran);
             Name = "AnaForm";
@@ -241,5 +253,6 @@
         private Button btn_yemek_raporu;
         private Button btn_rapor1;
         private Label lbl_hava_durumu;
+        private ComboBox comboBox1;
     }
 }

@@ -1,5 +1,5 @@
 ﻿
-namespace DTO
+namespace Islem.WebAPI.DTO
 {
     public class GeoCodingApiResult
     {

@@ -27,5 +27,33 @@ namespace Islem.WebAPI
             var sonuc = JsonSerializer.Deserialize<DTO.GeoCodingApiRoot>(response);
             return sonuc;
         }
+
+        public DTO.OpenMeteoApiRoot HavaDurumuGetir(string sehir)
+        {
+            ///Bu metot hava durumunu getirmek için kullanılabilir
+            ///Örneğin openweathermap api kullanılabilir
+            ///Bu metotun içinde web api çağrısı yapılır ve gelen sonuç parse edilerek hava durumu bilgisi elde edilir
+            ///
+            var adres = AdresToKoordinatAsync(sehir).Result;
+            string enlem = adres.results.FirstOrDefault().latitude.ToString().Replace(",", ".");
+            string boylam = adres.results.FirstOrDefault().longitude.ToString().Replace(",", ".");
+            string servisUrl = $"https://api.open-meteo.com/v1/forecast?latitude={enlem}&longitude={boylam}&current_weather=true";
+            HttpClient httpClient = new HttpClient();
+            var response = httpClient.GetStringAsync(servisUrl).Result;
+            var sonuc = JsonSerializer.Deserialize<DTO.OpenMeteoApiRoot>(response);
+            return sonuc;
+        }
+
+        public DTO.WttrApi.Root HavaDurumuGetir2(string sehir)
+        {
+            ///Bu metot wttr api'sini kullanarak hava durumunu getirmek için kullanılabilir
+            ///Bu metotun içinde web api çağrısı yapılır ve gelen sonuç parse edilerek hava durumu bilgisi elde edilir
+            string servisUrl = $"https://wttr.in/{sehir}?format=j1";
+            HttpClient httpClient = new HttpClient();
+            
+            var response = httpClient.GetStringAsync(servisUrl).Result;
+            var sonuc = JsonSerializer.Deserialize<DTO.WttrApi.Root>(response);
+            return sonuc;
+        }
     }
 }

@@ -43,12 +43,36 @@ namespace Lokanta
         private void AnaForm_Load(object sender, EventArgs e)
         {
             Islem.WebAPI.GeoCodingApiServis geoCodingApiServis = new Islem.WebAPI.GeoCodingApiServis();
-            var sehir = geoCodingApiServis.AdresToKoordinatAsync("Ankara").Result;
-            var bilgi = sehir.results.FirstOrDefault();
-            string koordinat = $"Enlem: {bilgi.latitude}, Boylam: {bilgi.longitude}";
-            string ad_nufus= $"Þehir: {bilgi.name}, Nüfus: {bilgi.population}";
-            lbl_hava_durumu.Text = ad_nufus+" "+koordinat;
+            //var sehir = geoCodingApiServis.AdresToKoordinatAsync("Ankara").Result;
+            //var bilgi = sehir.results.FirstOrDefault();
+            //string koordinat = $"Enlem: {bilgi.latitude}, Boylam: {bilgi.longitude}";
+            //string ad_nufus= $"Þehir: {bilgi.name}, Nüfus: {bilgi.population}";
+            //lbl_hava_durumu.Text = ad_nufus+" "+koordinat;
+            var havaDurumu = geoCodingApiServis.HavaDurumuGetir2("Bilecik");
+            //string havaBilgisi = $"Sýcaklýk: {havaDurumu.current_weather.temperature}°C, Rüzgar Hýzý: {havaDurumu.current_weather.windspeed} km/h";
+            var bilgi = havaDurumu.current_condition.FirstOrDefault();
+            var sehirBilgi = havaDurumu.nearest_area.FirstOrDefault();
+            string havaBilgisi = $"{sehirBilgi.areaName.First().value} - {bilgi.weatherDesc.First().value} - Sýcaklýk: {bilgi.temp_C}°C, Rüzgar Hýzý: {bilgi.windspeedKmph} km/h";
+
+            lbl_hava_durumu.Text = havaBilgisi;
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Islem.WebAPI.GeoCodingApiServis geoCodingApiServis = new Islem.WebAPI.GeoCodingApiServis();
+            //var sehir = geoCodingApiServis.AdresToKoordinatAsync("Ankara").Result;
+            //var bilgi = sehir.results.FirstOrDefault();
+            //string koordinat = $"Enlem: {bilgi.latitude}, Boylam: {bilgi.longitude}";
+            //string ad_nufus= $"Þehir: {bilgi.name}, Nüfus: {bilgi.population}";
+            //lbl_hava_durumu.Text = ad_nufus+" "+koordinat;
+            string secilenSehir = comboBox1.SelectedItem?.ToString();
+            var havaDurumu = geoCodingApiServis.HavaDurumuGetir2(secilenSehir);
+            //string havaBilgisi = $"Sýcaklýk: {havaDurumu.current_weather.temperature}°C, Rüzgar Hýzý: {havaDurumu.current_weather.windspeed} km/h";
+            var bilgi = havaDurumu.current_condition.FirstOrDefault();
+            var sehirBilgi = havaDurumu.nearest_area.FirstOrDefault();
+            string havaBilgisi = $"{sehirBilgi.areaName.First().value} - {bilgi.weatherDesc.First().value} - Sýcaklýk: {bilgi.temp_C}°C, Rüzgar Hýzý: {bilgi.windspeedKmph} km/h";
+
+            lbl_hava_durumu.Text = havaBilgisi;
+        }
     }
 }
