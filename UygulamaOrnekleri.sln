@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lokanta", "Lokanta\Lokanta.csproj", "{2B6E8679-0A32-4382-9C92-2BDF165A4143}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LokantaSetup", "LokantaSetup\LokantaSetup.vdproj", "{BEDBBE4E-D61C-72F0-8DE4-DF6D084C9807}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,8 @@ Global
 		{2B6E8679-0A32-4382-9C92-2BDF165A4143}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B6E8679-0A32-4382-9C92-2BDF165A4143}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B6E8679-0A32-4382-9C92-2BDF165A4143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEDBBE4E-D61C-72F0-8DE4-DF6D084C9807}.Debug|Any CPU.ActiveCfg = Debug
+		{BEDBBE4E-D61C-72F0-8DE4-DF6D084C9807}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

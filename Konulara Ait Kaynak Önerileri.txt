@@ -1,0 +1,100 @@
+1. C# Diline Giriş
+https://www-w3schools-com.translate.goog/cs/index.php?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://www.btkakademi.gov.tr/portal/course/c-programlama-26083
+https://dotnettutorials.net/course/csharp-dot-net-tutorials/
+
+2. Nesne Kavramı OOP Kavramları
+https://www-w3schools-com.translate.goog/cs/cs_oop.php?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://medium.com/kodcular/adan-z-ye-c-oop-2d766cf2d144
+https://www-c--sharpcorner-com.translate.goog/UploadFile/mkagrahari/introduction-to-object-oriented-programming-concepts-in-C-Sharp/?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://www-w3schools-com.translate.goog/cs/cs_classes.php?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://emrecelen.com.tr/c-sharp-class-ve-nesne-kavramlari/
+
+3. Fabrika Tasarım Deseni
+https://www.gencayyildiz.com/blog/c-factory-method-design-patternfactory-method-tasarim-deseni/
+https://www.evrenbal.com/tasarim-kaliplari-design-patterns-factory-method-nedir/
+https://medium.com/@dcankayrak/factory-design-pattern-nedir-1660318934af
+4. Ropository Pattern
+https://medium.com/@ufukinam/repository-design-pattern-nedir-c5267ae36bcd
+https://dotnettutorials-net.translate.goog/lesson/repository-design-pattern-csharp/?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+http://cagataykiziltan.net/tasarim-kaliplari-design-patterns/4-diger-tasarim-kaliplari/repository-pattern/
+
+5. Dependency Injection
+https://www.gencayyildiz.com/blog/dependency-injection-nedir-nasil-uygulanir/
+https://gokhana.medium.com/dependency-injection-nedir-nas%C4%B1l-uygulan%C4%B1r-kod-%C3%B6rne%C4%9Fiyle-44f4b0d576e4
+
+6. Temsilci Kavramı
+https://bidb.itu.edu.tr/seyir-defteri/blog/2013/09/06/c-%27ta-temsilci-(delegate)-ve-olay-(event)-kavram%C4%B1
+https://medium.com/@ravipatel.it/understanding-delegates-in-c-with-practical-examples-fdb253740ad7
+https://www.yusufsezer.com.tr/csharp-delegate/
+https://www-tutorialspoint-com.translate.goog/csharp/csharp_delegates.htm?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+
+7. C# Olay Tanımlamak
+https://ismailkasan.medium.com/c-ta-event-lar-6f9a18368d65
+https://www.gencayyildiz.com/blog/cta-delegatetemsilci-ve-eventolay-kullanimi/
+https://mustafabukulmez.com/2020/06/19/c-event-kullanimi-detayli-inceleme/
+https://alkanfatih.com/c-event-kullanimi-ornegi/
+
+8. Windows Form Uygulaması Geliştirme
+https://www.youtube.com/watch?v=CT_eZKU-JY0&list=PL4lgIe6SmfRUwgPXbp_PIyv33ocA2MHwb&index=2
+https://yazilimtoplulugu.com/d/62-c-tum-arac-kutusu-elemanlari
+https://www-geeksforgeeks-org.translate.goog/introduction-to-c-sharp-windows-forms-applications/?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://medium.com/@erenerdogan037/c-windows-form-temelleri-1-41cc92485a0c
+https://gelecegiyazanlar.turkcell.com.tr/egitimler/c-form-ile-gorsel-ve-nesne-tabanli-programlama
+
+9.Windows Form Uygulamalarında Form Elemanları Olaylarına Kod Yazmak
+https://www.csharpegitimi.com.tr/2023/07/c-form-ozellikleri-ve-eventleri.html
+https://furkanmorova.com/csharp-windows-form-events/
+https://www-geeksforgeeks-org.translate.goog/introduction-to-c-sharp-windows-forms-applications/?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://medium.com/@erenerdogan037/c-windows-form-temelleri-1-41cc92485a0c
+
+10. Entity Framework Core ile Veri Tabanı İşlemleri
+https://www.youtube.com/watch?v=dbI-kostQWo&list=PLQVXoXFVVtp1o3nq3-IXv42bPaFlzroBE
+https://www.yusufsezer.com.tr/entity-framework/
+https://medium.com/@ertugrulgokayduman/entity-framework-core-i%CC%87le-veritaban%C4%B1-i%CC%87li%C5%9Fkileri-nas%C4%B1l-y%C3%B6netilir-4fa875b28737
+https://www-devart-com.translate.goog/dotconnect/what-is-entity-framework-core.html?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://dotnettutorials-net.translate.goog/lesson/entity-framework-core/?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://www.youtube.com/watch?app=desktop&v=UYQFO8CJbFo
+
+11. Web Servislerle Çalışmak
+https://www.gencayyildiz.com/blog/web-service-kullanimi/
+https://kenslearningcurve-com.translate.goog/tutorials/getting-started-with-httpclient-in-c/?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://www.ayazduru.com.tr/blog/post/2023/06/08/c-sharp-ile-http-request-methodlari-ve-ornekleri
+https://medium.com/@mervedursun/c-httpwebrequest-ile-web-servis-kullan%C4%B1m%C4%B1-04ffd91c1b20
+https://www-bytehide-com.translate.goog/blog/httpclienthandler-csharp?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+
+12. Setup Dosyası Oluşturmak
+Aşağıdaki kaynaklardan sorumlusunuz. Bu kaynaklardan sorumlusunuz
+https://www.youtube.com/watch?v=S_NK1_AhvP4
+https://www-advancedinstaller-com.translate.goog/create-setup-exe-visual-studio.html?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://www.furkanpezek.com.tr/2019/09/c-setup-olusturma/
+https://learn.microsoft.com/en-us/answers/questions/1696798/how-to-create-with-visual-studio-a-deployment-for
+
+13. Visual Studio ile Github Kullanmak
+https://www-c--sharpcorner-com.translate.goog/article/how-to-use-github-in-visual-studio-2022/?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://muratbaseren.wordpress.com/2018/03/24/visual-studio-ile-github-repository-iliskilendirme/
+https://medium.com/@iremsagiroglu/git-ve-githuba-giri%C5%9F-visual-studio-code-%C3%BCzerinden-github-kullan%C4%B1m%C4%B1-94c2da3c220
+https://alkanfatih.com/visual-studio-ile-git-github-kullanimi/
+https://www.furkanpezek.com.tr/2019/09/c-setup-olusturma/
+
+Video Ders Kaynak Önerisi Genel Konuları Kapsayıcı
+https://www.youtube.com/playlist?list=PLQVXoXFVVtp3e_urGZcMNAHx2Eo4Rm5Xk
+https://www.youtube.com/playlist?list=PLQVXoXFVVtp306cqgKyC8NoxCmHIuWVBK
+
+
+C# Dili ile İlgili Faydalı Kaynaklar
+https://www-tutorialspoint-com.translate.goog/csharp/index.htm?_x_tr_sl=en&_x_tr_tl=tr&_x_tr_hl=tr&_x_tr_pto=tc
+https://dotnettutorials.net/course/csharp-dot-net-tutorials/
+https://www.tutorialsteacher.com/csharp
+https://www.geeksforgeeks.org/csharp-programming-language/
+https://www.w3schools.com/cs/index.php
+https://www.youtube.com/playlist?list=PLQVXoXFVVtp3e_urGZcMNAHx2Eo4Rm5Xk
+https://www.btkakademi.gov.tr/portal/course/c-programlama-26083
+https://www.youtube.com/playlist?list=PLqG356ExoxZU5keiJwuHDpXqULLffwRYD
+https://learn.microsoft.com/tr-tr/training/browse/?products=dotnet
+https://www.youtube.com/playlist?list=PL-xgGbFwcZO6OH510qQqwok2SiwcYLQWp
+https://www.udemy.com/course/sfrdan-c-sharp-ile-windows-application-ogrenin/?srsltid=AfmBOornzDsPo0rGsoEOrqXoQdinl3VPThsLoMGpN4nlBh6XBdUSaGls&couponCode=LETSLEARNNOW
+https://www.youtube.com/watch?v=liKyYxO29GE&list=PL4lgIe6SmfRUwgPXbp_PIyv33ocA2MHwb
+https://github.com/dotnet/samples
+https://www.c-sharpcorner.com/article/C-Sharp-tutorial/
+https://www.csharptutorial.net/

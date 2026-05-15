@@ -1,0 +1,49 @@
+Temel C# Özellikleri
+Form Kavramı
+Form Elemanları
+Olaylara Komut Yazmak
+Olaylara özel metot yazmak
+Windows kontrolleri
+Verilerle çalışmak
+Verileri form üzerinde gösteren kontroler: Combobox, datagridview,...
+Birden fazla form ile çalışmak
+Formlar arası veri taşımak
+Form Tasarlamak
+Web servisten veri çekerek form üzerinde görüntülemek
+Http request oluşturmak, post, get talepleri göndermek
+Özel olay tanımlamak
+Designer.cs dosyası
+Program.cs dosyası
+Yerel değişken, global değişken kavramları
+Veri tabanından veri çekmek
+EntityFramework core kullanımı, ef yüklemek, farklı veri tabanlarıya çalışmak, mssql, postgresql için yükleme yapmak
+Yeni bir entity tanımlamak
+Entity arasındaki ilişkelerin navigation property olarak tanımlanması
+Entity nesenleri ve veri tabanındaki tabloları eşleştirmek
+EntityFramework core DbContext tanımlamak
+EntityFramework core bağlantı cümleciğini yönetmek, bağlantı cümleciği güvenliği
+EntityFrameworkCore migration işlemleri
+DTO nesneleri kullanmak
+Generic metot ile DTO nesnesi entity dönüşümünü yapmak
+Interface ile çalışmak
+Form üzerinde interface kullanarak işlemleri yapmak
+Formda tanımlanan interfaceleri gerçek sınıflarla doldurmak
+Dependencey Inversion Kavramı
+Fabrika Tasarım Deseni
+Dinamik form kontrolleri tanımlamak
+Dinamik kontrollerin olaylarını tanımlamak
+Programatik olarak görsel ayarlara erişmek
+Kurulum dosyası hazırlamak
+Partial Class Kavramı
+Static sınıflarla çalışmak
+Formları Temel Bir formdan türetmek
+DTO nesneleri üzerinde validation tanımlamak
+Generic metot tanımlamak
+Verileri json olarak dönüştürmek, Javascriptserialize işlemi, xml serialize işlemi
+C# OOP Kavramları
+Projeyi derlemek, proje kurulum dosyası hazırlamak, kendi kütüphanemizi yazmak, projeler arasında referans eklemek
+Kullanıcı tanımlı kontrol oluşturmak - UserControl Tanımlamak
+Github ile çalışmak, projeyi githuba göndermek, commit, push ve pop işlemleri yapmak
+Yapıcı metotlar, formun yapıcı metotu, InitializeComponent metodu ne işe yarar
+Form içinde global değişken kullanmak
+
